@@ -1,0 +1,55 @@
+<%- include("../partials/header") %>
+<div id="register-container" class="container mt-5">
+  <%- include("../partials/appName") %>
+  <div class="row ">
+    <div class="  col-8  justify-content-center">
+          <h1 id="title">Register</h1>
+
+          <% if(typeof errors !== "undefined"){%>
+            <% errors.forEach((error)=>{ %>
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <%= error.msg %>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+            <% })%>
+            
+          <% }%>
+
+          
+          <form action="register" method="POST">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input autocomplete="off" type="text" value="<%= typeof firstName !== 'undefined' ? firstName : '' %>" class="form-control input-fields-register-styles" id="firstName" name="firstName" >
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input autocomplete="off" type="text" class="form-control" id="lastName" name="lastName" value="<%= typeof lastName !== 'undefined' ? lastName : '' %>">
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input autocomplete="off" type="email" class="form-control" id="email" name="username" value="<%= typeof username !== 'undefined' ? username : '' %>">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <div class="form-group">
+              <label for="passcode">Access Code (given by admin)</label>
+              <input autocomplete="off" type="text" class="form-control" id="passcode" name="passcode" value="<%= typeof passcode !== 'undefined' ? passcode : '' %>" >
+            </div>
+            <button type="submit" id="btn-submit" class="btn send-btn ">Submit</button>
+          </form>
+        
+        
+   
+    </div>
+
+
+  </div>
+  <%- include("../partials/credits") %>
+</div>
+
+<%- include("../partials/footer") %>

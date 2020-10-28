@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style>
+
+/* none print styles NOTE: here it looks very big on regular screen */
+body
+                    {
+                    
+                        /* border:2px solid black; */
+                        width:1100px ;
+                        height: 1375px;
+                        /* margin:0,0,0,0; */
+                    }
+
+                .box1, .box2, .box3{
+                    border:2px dashed black;
+                        height: 400px;
+                        width: 600px;
+                        font-size: 34px;
+                        text-align: center;
+                        margin: 10px;
+                        
+                }
+                .box1{
+                    padding-top: 20px;
+                }
+              
+
+                .instructions-container{
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        border:2px dashed black;
+
+                        height: 400px;
+                        width: 600px;
+                        font-size: 34px;
+                        padding: 10px;
+                        padding-top: 20px;
+                      
+                }
+
+                .instructions-container p{
+                    font-size: 24px;
+                    margin-top: 10px;
+                }
+
+                /* .name-tag-pointer-container p{
+                    font-size:45px;
+                } */
+                .id-tag-pointer-container, .name-tag-pointer-container, .instructions-tag-pointer-container {
+                    font-size: 28px;
+                    /* border:2px solid black; */
+                    padding: 5px;
+                }
+
+                .tip{
+                    font-weight: bold;
+                }
+
+                .card-label{
+                    font-weight: bold;
+                }
+
+                .box2 p{
+                    font-weight: bold;
+                    font-size: 75px;
+                }
+/* print styles do print preview and that is actual */
+@media print{
+    body
+                    {
+                    
+                        /* border:2px solid black; */
+                        width:1100px ;
+                        height: 1375px;
+                        /* margin:0,0,0,0; */
+                    }
+
+                .box1, .box2, .box3{
+                    border:2px dashed black;
+                        height: 400px;
+                        width: 600px;
+                        font-size: 34px;
+                        text-align: center;
+                        margin: 10px;
+                        
+                }
+
+                .box1{
+                    padding-top: 20px;
+                }
+
+                .instructions-container{
+                        margin-top: 10px;
+                        margin-left: 10px;
+                        border:2px dashed black;
+
+                        height: 400px;
+                        width: 600px;
+                        font-size: 34px;
+                        padding: 10px;
+                        padding-top: 20px;
+                      
+                }
+
+                .instructions-container p{
+                    font-size: 24px;
+                    margin-top: 10px;
+                }
+
+                /* .name-tag-pointer-container p{
+                    font-size:45px;
+                } */
+                .id-tag-pointer-container, .name-tag-pointer-container, .instructions-tag-pointer-container {
+                    font-size: 28px;
+                    /* border:2px solid black; */
+                    padding: 5px;
+                }
+
+                .tip{
+                    font-weight: bold;
+                }
+
+                .card-label{
+                    font-weight: bold;
+                }
+
+                .box2 p{
+                    font-weight: bold;
+                    font-size: 75px;
+                }
+
+                /* FOR PRINTING */
+            }
+
+              
+
+        </style>
+    </head>
+
+    <body>
+        
+
+
+                <div class="row">
+                    <div class=" col-7  ">
+                        <div class="box1">
+                            <p><span class="card-label">Locker Number:</span> <%=locker.number%></p>
+                            <p><span class="card-label">Location:</span> <%=locker.position%></p>
+                            <p><span class="card-label">Combination:</span> <%=locker.combination%></p>
+                            <p><span class="card-label">First Name:</span> <%=locker.firstName%></p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="id-tag-pointer-container  ">
+                            <p >
+                                <------ Cut this out and keep this with you until you memorize the locker combination 
+                            </p>
+                            <p><span class="tip">TIP:</span> Keep inside with your ID badge</p>
+                        </div>
+                       
+                        
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-7">
+                        <div class=" box2">
+                            <p><%=locker.firstName%></p>
+                            <p><%=locker.lastName%></p>
+                        </div>
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="name-tag-pointer-container  ">
+                            <p >
+                                <------Cut this out and place inside of badge holder which should be in front of the locker
+                            </p>
+                        </div>
+                       
+                        
+                    </div>
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-7">
+                        <div class="instructions-container">
+                            <!-- <h1>*Please make sure that the name tag gets put on locker*</h1>
+                            <br> -->
+                            <h3>Combination Instructions:</h3>
+                            <p>1 – Turn the Dial 3 times RIGHT – Stop at the first number.</p>
+                            <p>2 – Turn the Dial LEFT 1 complete turn and past the first number – Stop at the second number.</p>
+                            <p>4 – Turn the Dial RIGHT – Stop at the third number</p>
+                    
+                    </div>
+                    </div>
+                    <div class="col-5 align-self-center">
+                        <div class="instructions-tag-pointer-container  ">
+                            <p >
+                                <------Cut this out and keep this with you until you memorize the locker combination
+                            </p>
+                            <p><span class="tip">TIP:</span> Keep inside with your ID badge</p>
+                        </div>
+                       
+                        
+                    </div>
+                    
+                </div>
+                
+
+        
+    </body>
+</html>

@@ -1,0 +1,94 @@
+:root{
+	--background-color: #CBD4C2;
+    --border-color: #50514F;
+    --button-color: #247BA0;
+    
+    /*used to control all the title sizing   */
+    --page-title-size: 28px;
+}
+
+
+/* points to all the form groups */
+#locker-add-container .form-group{
+    margin-top: 24px;
+   
+}
+
+/* points to all rows */
+#locker-add-container  .row{
+    justify-content:center;
+    
+}
+
+/* title */
+#locker-add-container  .title{
+   font-size: var(--page-title-size);
+    
+}
+
+/* main container */
+#locker-add-container {
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset   var(--border-color) ;
+    border-radius: 25px;
+}
+
+/* points to all labels */
+#locker-add-container label{
+    font-weight: bold;
+}
+
+/************** back to lockers Link */
+#locker-add-container .back-to-lockers-container a{
+    color: #247BA0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* back to locker link hover */
+#locker-add-container .back-to-lockers-container a:hover 
+{
+     color:#50514F; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+
+/*****************create locker button */
+.btn-create-locker{
+    background-color: var(--button-color);
+    color: white;
+}
+
+
+/* points to both backToLockers, titleContainer */
+#locker-add-container .back-to-lockers-container, #locker-add-container .title-container {
+    text-align: center;
+}
+
+
+/************ controls the color of bootstrap select dropdown in the new locker entry */
+.btn-light {
+    background-color: #50514F;
+    color:white;
+    border-color: #50514F;
+
+}
+
+.btn-light:focus{
+    background-color: #50514F;
+    color:white;
+    border-color: #50514F;
+}
+
+.dropdown-menu{
+    background-color: #247BA0;
+    color: #FFFCFF;
+}
+
+.dropdown-menu .dropdown-item:hover{
+    background-color: #C3B299;
+    color: black;
+}
+

@@ -1,0 +1,49 @@
+/* main container */
+#register-container{
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset    var(--border-color);
+    border-radius: 25px;
+   
+}
+
+/* all rows */
+#register-container .row{
+    justify-content: center;
+}
+
+/* mai title */
+#register-container #title{
+    margin-top: 20px;
+    text-align: center;
+    font-size: var(--page-title-size);
+}
+
+/* labels */
+#register-container label{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* error msg */
+#register-container .error-msg{
+    text-align: center;
+}
+
+/* send btn */
+#register-container .send-btn{
+    background-color: var(--button-color);
+color: white;
+margin-bottom: 20px;
+}
+
+/* send btn hover*/
+#register-container .send-btn:hover{
+
+    color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+
+}
+
+

@@ -1,0 +1,59 @@
+/* main container  */
+#edit-locker-container{
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset    ;
+    border-radius: 25px;
+}
+
+/* points to all rows */
+#edit-locker-container .row{
+    justify-content:center;
+}
+
+/* confirm button */
+#edit-locker-container .confirm-btn{
+    background-color: var(--button-color);
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+/* used for the labels locker number, locker position */
+#edit-locker-container .row span{
+    font-weight: bold;
+}
+
+/* title */
+#edit-locker-container .title{
+ text-align: center;
+ margin-bottom: 25px;
+}
+
+
+/* back lockers link container*/
+#edit-locker-container .lockers-link{
+    padding-top: 25px;
+    color: #247BA0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* back to locker link */
+#edit-locker-container a:hover{
+    color:#50514F; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+/* date picker */
+#edit-locker-container #datepicker{
+    border:2px solid white;
+    width: 100%;
+    border-radius: 3px;
+    font-weight: 100;
+}
+
+#edit-locker-container .commentsContainer{
+    margin-top: -15px;
+}

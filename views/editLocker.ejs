@@ -1,0 +1,115 @@
+<%- include("partials/header") %>
+
+<div id="edit-locker-container" class="container">
+  <%- include("partials/appName") %>
+  <div class="row">
+    <div class="col-8">
+      <h1 class="title">Edit Locker Entry</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-7">
+      <p><Span>Locker Number: </Span><%= locker.number%></p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-7">
+      <p><span>Locker Position: </span><%= locker.position%></p>
+    </div>
+  </div>
+
+  <form
+    class="form-signin"
+    action="/lockers/locker/<%= locker.number%>"
+    method="post"
+  >
+    <div class="row">
+      <div class="col-7 form-group">
+        <input type="text" value="<%= locker.combination %>"
+        name="lockerCombination" id="inputLockerCombination" class="form-control"
+        autocomplete="off" placeholder="Locker Combination" required onkeydown="limit(this);" onkeyup="limit(this);">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7 form-group">
+        <input
+          type="text"
+          value="<%= locker.firstName%>"
+          name="firstName"
+          id="inputFirstName"
+          class="form-control"
+          placeholder="First Name"
+          autocomplete="off"
+         
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7 form-group">
+        <input
+          type="text"
+          value="<%= locker.lastName%>"
+          name="lastName"
+          id="inputLastName"
+          class="form-control"
+          placeholder="Last Name"
+          autocomplete="off"
+     
+        />
+      </div>
+    </div>
+    <!--  -->
+    <div class="row">
+      <div class="col-7 form-group">
+        <p><input name="dateAssigned" type="text" id="datepicker" /></p>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="row">
+      <div class="col-7 form-group commentsContainer">
+        <input
+          type="text"
+          value="<%= locker.comments %>"
+          name="comments"
+          class="form-control"
+          placeholder="comments"
+          autocomplete="off"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-7">
+        <button class="btn confirm-btn" type="submit">Confirm Changes</button>
+      </div>
+    </div>
+  </form>
+  <input id="hidden-field-date-Assigned" type="hidden" value="<%= locker.dateAssigned %>">
+  <div class="row">
+    <div class="col-7 lockers-link">
+      <a href="/lockers">Back to Lockers</a>
+    </div>
+  </div>
+
+  <%- include("partials/credits") %>
+</div>
+
+<!-- code for jquery time picker -->
+<script>
+  // grab the input hidden filed which is used to get locker assigned date
+  let dateAssigned = document.getElementById("hidden-field-date-Assigned").value;
+
+  //check to see if locker date is empty, if its is create a new current date else use current value of date
+  dateAssigned =="" ? dateAssigned = new Date() : dateAssigned= dateAssigned;
+ 
+  $(function () {
+    $("#datepicker").datepicker().datepicker("setDate", dateAssigned);
+  });
+</script>
+
+<%- include("partials/footer") %>
+<%- include("partials/combinationJS") %>

@@ -1,0 +1,124 @@
+
+/* points to all p elements */
+#lockers-view-container p{
+   
+    border-radius: 10px;
+    border:5px inset  #247BA0;
+    padding: 5px;
+    background-color: white;
+ 
+    
+}
+
+
+/* buttons style */
+#lockers-view-container .button-nav .btn {
+    background-color: var(--button-color);
+    color: white;
+    width: 100%;
+    /* margin-bottom: 30px; */
+    margin:10px 0 45px 0;
+
+}
+
+#lockers-view-container .button-nav .btn:hover {
+    background-color: #C3B299;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* used to control the space between columns */
+#lockers-view-container .data-rows div, 
+#lockers-view-container .labels-row div {
+    margin-left: 10px;
+}
+
+
+/* points to all number links */
+.number-link-container a{
+    text-decoration: none;
+   font-weight: bold;
+   border-radius: 10px;
+   border:5px inset  #247BA0;
+   padding: 5px;
+   background-color: white;
+
+    
+}
+
+/* points to the container of number links */
+.number-link-container a:hover{
+  background-color: #C3B299;
+   
+    
+}
+
+/* Main container */
+#lockers-view-container{
+    max-width: 750px;
+    background-color: var(--background-color);
+    border:10px inset var(--border-color)  ;
+    border-radius: 25px;
+   
+    
+   
+     
+}
+
+/* points to all the rows */
+#lockers-view-container .row{
+    justify-content:center;
+}
+
+/* points to title container */
+#lockers-view-container .title-container{
+  
+    text-align: center;
+}
+
+#lockers-view-container .title-container h1{
+  
+    font-size: var(--page-title-size);
+}
+
+#lockers-view-container .title-container h2{
+  
+    font-size: 18px;
+}
+
+/* points to actual number links */
+#locker-number-link{
+    
+    display: block;
+    text-align: center;   
+}
+
+/* points to locker label container and the other labels */
+#lockers-view-container .labels-row p{
+    text-align: center;
+    font-weight: bold;
+    background-color: #247BA0;
+    color: #FFFCFF;
+}
+
+
+/* points to postion column */
+#lockers-view-container .data-rows #position-container, #position-label-container {
+    padding-right: 0; 
+    padding-left: 0; 
+    
+}
+
+/* points to actual locker postion elements */
+#lockers-view-container .position{
+    text-align: center;
+}
+
+#lockers-view-container .firstName-container p{
+   white-space: nowrap; /*does not allow white space in text to wrap*/
+   overflow: auto; /*if text is to long gives it a horizontal scrol bar*/
+   text-align: center;
+   
+}
+

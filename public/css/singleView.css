@@ -1,0 +1,67 @@
+/* Main div that is used as main container */
+#single-view-container{
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset    var(--border-color);
+    border-radius: 25px;
+}
+
+/* points to all rows */
+#single-view-container .row{
+    justify-content:center;
+}
+
+/* title */
+#single-view-container .title{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: var(--page-title-size);
+}
+
+
+/* Points to all p tags in the main container */
+#single-view-container p{
+    border:2px solid black;
+    border-radius: 10px;
+    border:5px inset  #247BA0;
+    padding: 5px;
+    background-color: white;
+    
+}
+
+/* points at all the labels */
+#single-view-container .row span{
+font-weight: bold;
+}
+
+
+.clear-out-btn, .edit-btn, .lockers-btn, .print-btn {
+background-color: var(--button-color);
+color: white;
+width: 100%;
+margin-bottom: 15px;
+margin-top: 15px;
+}
+
+
+#single-view-container  .btn:hover {
+    background-color: #C3B299;
+    color: black;
+    font-weight: bold;
+}
+
+
+/* points at both anchor tags (edit locker, lockers) */
+#single-view-container .anchor-container {
+    margin-top: 25px;
+    color: #247BA0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* points at both anchor tags (edit locker, lockers) hover effect */
+#single-view-container .anchor-container a:hover {
+    color:#50514F; 
+     text-decoration:none; 
+     cursor:pointer;  
+}

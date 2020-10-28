@@ -1,0 +1,16 @@
+#app-name{
+   font-weight: 100;
+   margin-bottom: 30px;
+   margin-left: 10px;
+   
+}
+ 
+#app-name span{
+    font-weight: bolder;
+    letter-spacing: 5px;
+    
+ }
+
+ #app-name .letter-r{
+    font-weight: 100;
+ }

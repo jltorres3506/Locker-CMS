@@ -1,0 +1,13 @@
+.accounts-link{
+    text-decoration: none;
+    color: black;
+}
+
+.accounts-link:hover{
+    text-decoration: none;
+    color: black;
+}
+#app-name a {
+    text-decoration: none;
+    color: black;
+}

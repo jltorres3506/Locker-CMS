@@ -1,0 +1,66 @@
+<%- include('../partials/header') %>
+
+<div id="login-container" class=" container ">
+  <%- include("../partials/appName") %>
+  <div class="row ">
+    <div class=" col-8  ">
+          <h1 class="title">Login</h1>
+
+          <%- include('../partials/errorMsg') %>
+
+          <!-- the failed login MSG -->
+          <% if(loginFailedMsg != ""){%>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <%=loginFailedMsg%>
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <% }%>
+
+            <!-- the registered MSG -->
+            <% if(registeredMsg != ""){%>
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <%=registeredMsg%>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <% }%>
+
+          <form action="" method="POST">
+            <div class=" email-container form-group">
+              <label for="email">Email</label>
+              <input id="input-fields-login-styles" type="email" class="form-control" name="username" autocomplete="off" value="<%= typeof username != 'undefined' ? username : '' %>">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input id="input-fields-login-styles" type="password" class="form-control" name="password">
+            </div>
+            <div class="   row ">
+                <div class=" login-btn-container   col-6 ">
+                  <input class="  btn login-btn" type="submit"  value="Login" class="btn">
+                </div>
+              <div class=" col-6 d-flex justify-content-end ">
+                <a class="btn register-btn "  href="/users/register">Register</a>
+              </div>
+           
+            </div>
+            <div class=" password-reset-row row">
+              <div class=" col-12">
+                <a href="/users/password-reset">Reset Password</a>
+              </div>
+            </div>
+            
+          </form>
+        
+
+       
+     
+    </div>
+
+  </div>
+  <%- include("../partials/credits") %>
+</div>
+
+<%- include('../partials/footer') %>

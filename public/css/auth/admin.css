@@ -1,0 +1,81 @@
+
+#admin-view-container{
+    max-width: 750px;
+    background-color: var(--background-color);
+    border:10px inset var(--border-color)  ;
+    border-radius: 25px;
+}
+
+
+/* styles for label row */
+#admin-view-container .labels-row p{
+    border-radius: 10px;
+    border:5px inset  #247BA0;
+    padding: 5px;
+    background-color: #247BA0;
+    text-align: center;
+    font-weight: bold;
+    background-color: #247BA0;
+    color: #FFFCFF;
+}
+
+/* styling of data rows */
+#admin-view-container .data-row p, #admin-view-container .data-row a{
+    text-decoration: none;
+   border-radius: 10px;
+   border:5px inset  #247BA0;
+   padding: 5px;
+   background-color: white;
+   overflow: auto;
+   text-align: center;
+   
+}
+
+/* points directly to anchor tag which is the first name */
+#admin-view-container .data-row a{
+    text-decoration: none; /* no underline */
+    color: black;
+}
+
+#admin-view-container .data-row a:hover{
+    background-color: #C3B299;
+}
+
+/* points to all the div tags of the label and data rows */
+#admin-view-container  .data-row div, #admin-view-container .labels-row div{
+    padding-left: 6px;
+    padding-right: 3px;
+}
+
+/* header portion */
+#admin-view-container .header-row, #admin-view-container .logout-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* title h1 tag */
+#admin-view-container .title-container h1 {
+font-size:var(--page-title-size);
+
+
+}
+
+/* title container */
+#admin-view-container .title-container{
+    padding:0;
+    margin-bottom: -15px;
+}
+/* logout a tag */
+#admin-view-container .logout-container a{
+    background-color: var(--button-color);
+    color: white;
+
+}
+
+#admin-view-container .logout-container a:hover{
+    background-color: #C3B299;
+    color: black;
+    font-weight: bold;
+}
+
+

@@ -1,0 +1,61 @@
+#user-edit-container{
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset    var(--border-color);
+    border-radius: 25px;
+}
+
+#user-edit-container .is-active-container, #user-edit-container .is-admin-container{
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#user-edit-container label{
+    font-weight: bold;
+}
+
+/* send btn */
+#user-edit-container .send-btn{
+    background-color: var(--button-color);
+color: white;
+margin-bottom: 20px;
+}
+
+
+/* send btn hover*/
+#user-edit-container .send-btn:hover{
+
+    color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+
+}
+
+
+
+/* delete btn*/
+#user-edit-container .btn-delete{
+    background-color:red;
+color: white;
+margin-bottom: 20px;
+}
+
+
+
+/* delete btn hover*/
+#user-edit-container .btn-delete:hover{
+
+    color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+
+}
+
+
+#user-edit-container #title{
+    margin-bottom: 25px;
+}
+
+#user-edit-container .form-group{
+    margin-bottom: 30px;
+}

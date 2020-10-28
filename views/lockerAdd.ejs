@@ -1,0 +1,107 @@
+<%- include("partials/header") %>
+
+<div id="locker-add-container" class="container">
+  <%- include("partials/appName") %>
+  <div class="row">
+    <div class="col-sm-7 title-container">
+      <h1 class="title">New Locker Entry</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-7 back-to-lockers-container">
+      <a href="/lockers">Back to Lockers</a>
+    </div>
+  </div>
+  <%- include("partials/errorMsg") %>
+  <form class="form-signin" action="/lockers" method="post">
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label for="inputLockerNumber">Locker Number</label>
+        <input
+          type="text"
+          name="lockerNumber"
+          id="inputLockerNumber"
+          class="form-control"
+          placeholder="Locker Number"
+          required
+          autofocus
+          autocomplete="off"
+          value="<%= typeof lockerNumber !== 'undefined' ? lockerNumber : '' %>"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6 ">
+        <label for="inputLockerCombination">Locker Combination</label>
+        <input
+          type="text"
+          name="lockerCombination"
+          id="inputLockerCombination"
+          class="form-control locker-combo-input"
+          placeholder=" example  01-20-01"
+          required
+          autocomplete="off"
+          value="<%= typeof lockerCombination !== 'undefined' ? lockerCombination : '' %>"
+          onkeydown="limit(this);" onkeyup="limit(this);"
+        />
+      
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <select class="selectpicker" name="position" required>
+          <option value="none">-- Locker Position --</option>
+          <option value="Top">Top</option>
+          <option value="Middle">Middle</option>
+          <option value="Bottom">Bottom</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label for="inputFirstName">First Name</label>
+        <input
+          type="text"
+          name="firstName"
+          id="inputFirstName"
+          class="form-control"
+          placeholder="First Name"
+          autocomplete="off"
+          value="<%= typeof firstName !== 'undefined' ? firstName : '' %>"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <label for="inputLastName">Last Name</label>
+        <input
+          type="text"
+          name="lastName"
+          id="inputLastName"
+          class="form-control"
+          placeholder="Last Name"
+          autocomplete="off"
+          value="<%= typeof lastName !== 'undefined' ? lastName : '' %>"
+        />
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-6">
+        <button class="btn btn-create-locker" type="submit">
+          Add Locker
+        </button>
+      </div>
+    </div>
+  </form>
+  <%- include("partials/credits") %>
+</div>
+<%- include("partials/footer") %>
+<%- include("partials/combinationJS") %>
+
+
+
+
+  
+  
+

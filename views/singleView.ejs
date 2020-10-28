@@ -1,0 +1,105 @@
+<%- include("partials/header") %>
+<div id="single-view-container" class="b-black container">
+    <%- include("partials/appName") %>
+    <div class="row">
+        <di class="  col-12">
+            <h1 class="title">Single Locker View</h1>
+        </di>
+    </div>
+
+    <div class="row">
+        <div class=" col-10">
+            <p><span>Locker Number:</span> <%= locker.number%></p>
+        </div>
+    </div>
+
+    <div class="row">
+        <di class="col-10 ">
+            <p><span>Locker Combination:  </span><%= locker.combination%></p>
+        </di>
+    </div>
+
+    <div class="row">
+        <di class="col-10">
+            <p ><span>Locker Position: </span><%= locker.position%></p>
+        </di>
+    </div>
+
+    <div class="row">
+        <di class="col-10">
+            
+            <p ><span>First Name: </span><%= locker.firstName%></p>
+        </di>
+    </div>
+
+
+    <div class="row">
+        <di class="col-10 ">
+            
+            <p><span>Last Name: </span><%= locker.lastName%></p>
+        </di>
+    </div>
+    <div class="row">
+        <di class="col-10 ">
+            
+            <p ><span>Date: </span><%= locker.dateAssigned %></p>
+        </di>
+    </div>
+    <div class="row">
+        <di class="col-10 ">
+            
+            <p><span>Comments: </span><%= locker.comments%></p>
+        </di>
+    </div>
+    
+    
+    <div class="row ">
+        <div class="col-6">
+            <form id="clearLockerForm" action="/lockers/<%=locker.number%>/clearOut" method="post">
+            <button id="clearLockerBtn"  class=" btn clear-out-btn">Clear Out Locker</button>
+        </form>
+        </div>
+
+        <div class=" col-6">
+            <a class="btn edit-btn w-100" href="/lockers/locker-edit-form/<%= locker.number %>">Edit locker Entry</a>
+        </div>
+       
+    </div>
+
+<div class="row ">
+    <div class="col-6 ">
+        <a class = " btn lockers-btn"href="/lockers">Lockers</a>
+    </div>
+    <div class="col-6 ">
+        <a class = " btn print-btn" href="/lockers/print/<%= locker.number %>">Print</a>
+    </div>
+</div>
+
+<%- include("partials/credits") %>
+</div>
+
+<script> 
+
+
+     // grab lockerClearOut button and disable submit and user must confirm in order to send form
+     const clearLockerBtn = document.getElementById("clearLockerBtn").addEventListener("click",(event)=>{
+        event.preventDefault();
+
+      const results =  prompt("please confirm that you want to clear out this locker, this cant be undone! "+
+                "type in YES to confirm or NO to cancel");
+
+                if( results.toUpperCase() === "YES"){
+                
+                    // grab form and submit it
+                    document.getElementById("clearLockerForm").submit();
+
+                }else{
+                    //do nothing
+                   
+                };
+     });
+      
+
+
+</script>
+<%- include("partials/footer") %>

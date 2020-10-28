@@ -1,0 +1,61 @@
+<%- include("partials/header") %>
+
+<div id="lockers-view-container" class=" container ">
+    <%- include("partials/appName") %>
+    <div  class="  header-row row">
+        <div class="  title-container col-10">
+            <h1>Locker List</h1>
+            <h2>Welcome <%= currentUser %></h2>
+        </div> 
+    </div>
+
+    <div class=" button-nav  row">
+        <div class=" col-4">
+            <a class="btn  " href="/users/logout">Logout</a>
+        </div>
+        <div class=" col-4">
+            <a class="btn " href="/lockers/table"> Table</a>
+        </div>
+        <div class=" col-4">
+            <a class="btn " href="lockers/lockerAdd">Create </a>
+        </div>
+    </div>
+    <div class="no-gutters row labels-row">
+        <div id="locker-number-label-container" class=" col-3">
+            <p >Locker #</p> 
+        </div>
+        <div class="first-name-label-container  col-4">
+            <p > First Name </p>
+        </div>
+        
+        <div class=" last-name-label-container col-4">
+            <p > Last Name </p>
+        </div>
+        
+        
+    </div>
+  <%  lockers.forEach((locker)=>{   %>
+    
+<div class="no-gutters row data-rows ">
+    <div class=" number-link-container col-3">
+        <a  id="locker-number-link"  href="/lockers/locker/<%= locker.number %>" > <%= locker.number %> </a> 
+    </div>
+
+
+    <div class="firstName-container col-4">
+        <p> <%= locker.firstName %> </p> 
+    </div>
+
+    <div class="col-4">
+        <p > <%= locker.lastName %> </p>
+    </div>
+    
+    
+</div>
+        
+
+<% })   %>
+<%- include("partials/credits") %>
+</div>
+
+<%- include("partials/footer") %>

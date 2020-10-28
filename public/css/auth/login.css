@@ -1,0 +1,72 @@
+
+body{
+    margin-top: 50px;
+}
+
+
+/* main container */
+#login-container{
+    max-width: 550px;
+    background-color: var(--background-color);
+    border:10px inset    var(--border-color);
+    border-radius: 25px;
+   
+}
+
+
+
+/* rows */
+#login-container .row{
+
+    justify-content: center;
+}
+
+/* title */
+#login-container .title{
+    text-align: center;
+    margin-top: 20px ;
+    font-size: var(--page-title-size);
+}
+
+/* error msg */
+#login-container .error-msg{
+    text-align: center;
+}
+
+
+/* registered msg */
+#login-container .alert-success{
+    text-align: center;
+    background-color: #5ADA4E;
+}
+
+/* labels */
+#login-container label {
+    font-weight: bold;
+   
+}
+
+/* email container */
+#login-container .email-container{
+    margin-bottom: 25px;
+}
+
+/* login and register btns */
+#login-container .login-btn, .register-btn{
+    background-color: var(--button-color);
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+#login-container .login-btn:hover{
+     color:black; 
+     text-decoration:none; 
+     cursor:pointer;  
+}
+
+/* reset password link */
+#login-container .password-reset-row{
+    margin-bottom: 25px;
+}
+

@@ -1,0 +1,67 @@
+<%- include('../partials/header') %>
+
+<div id="admin-view-container" class=" container ">
+    <%- include("../partials/appName") %>
+    <div class=" header-row row">
+        <div class="   title-container col-12">
+            <h1 >Accounts</h1>
+        </div> 
+    </div>
+    <div class=" row">
+        <div class=" logout-container  col-12">
+            <a class="btn" href="/users/logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="labels-row row ">
+        <div id="locker-number-label-container" class=" col-4">
+            <p >First Name</p> 
+        </div>
+        
+
+        
+        <div class="first-name-label-container  col-5">
+            <p > Username </p>
+        </div>
+        
+        <div class=" last-name-label-container col-3">
+            <p > Active </p>
+        </div>
+
+       
+        
+    </div>
+ <% users.forEach((user)=>{ %>
+
+
+
+    <div class=" data-row row  ">
+       
+        <div class="  col-4">
+            <a  id="locker-number-link"  href="/users/user-edit/<%=user._id%>" > <%=user.firstName%>  </a> 
+        </div>
+       
+        <div class="  col-5">
+            <p><%=user.username%></p>
+        </div>
+
+        <div class="col-3 is-active-container">
+            <p > <%=user.active == true ? "Yes" : "No"%> </p>
+        </div>
+    </div>    
+
+    
+
+
+    <%})%>
+    
+
+        
+
+
+    <%- include("../partials/credits") %>
+</div>
+
+<%- include('../partials/footer') %>
+
+

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <style>
+            #csv-table tr th{
+                border:2px solid black;
+                text-align: center; 
+            }
+
+            #csv-table .csv-data, #csv-table .csv-data td {
+                border:2px solid black;
+                text-align: center;   
+            }
+
+            body{
+                margin-top:50px;
+            }
+
+
+        </style>
+    </head>
+
+<table id="csv-table" style="width:100%">
+    <tr>
+      <th>Locker#</th>
+      <th>Position</th>
+      <th>Combination</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Comments</th>
+      
+    </tr>
+    <%lockers.forEach ((locker)=>{ %>
+
+        <tr class="csv-data">
+            <td><%=locker.number%></td>
+            <td><%=locker.position%></td>
+            <td><%=locker.combination%></td>
+            <td><%=locker.firstName%></td>
+            <td><%=locker.lastName%></td>
+            <td><%=locker.comments%></td>
+        </tr>
+
+  <%  }) %>
+    
+   
+  </table>
+
+</body>
+</html>

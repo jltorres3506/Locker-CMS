@@ -1,0 +1,42 @@
+<script>
+//   this code is used in 2 sections editLocker.ejs and lockerAdd.ejs just to handle locker combination
+// formating  
+//NOTE: actual element must have / onkeydown="limit(this);" onkeyup="limit(this);" / for this to work
+ 
+    // 1 grab locker combination input element
+    let input = document.getElementById("inputLockerCombination");
+  
+    //add an event listener of when a key is pushed down and released
+    input.addEventListener("keyup", (event)=>{
+  
+      //get the value that is in the input
+      let inputV =input.value;
+      
+      //remove all chars and spaces and symbols
+      inputV = inputV.replace(/[\D\s\._\-]+/g, "");
+     
+      var split = 0;
+      var chunk = [];
+      
+     for (var i = 0, len = inputV.length; i < len; i += split) {
+         split = ( i >= 2 ) ? 2 : 2;
+         chunk.push( inputV.substr( i, split ) );
+     }
+      
+      input.value =(chunk.join("-").toUpperCase());
+  
+    });
+  
+  // used to put a limit on number of chars for locker combo field
+    function limit(element)
+  {
+      var max_chars = 8;
+  
+      if(element.value.length > max_chars) {
+          element.value = element.value.substr(0, max_chars);
+      }
+  }
+   
+  
+  </script>
+  
