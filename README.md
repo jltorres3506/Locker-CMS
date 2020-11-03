@@ -3,6 +3,8 @@ An app to keep track of lockers
 
 ## Live App
 https://locker-cms-demo.herokuapp.com
+username: guest@gmail.com
+password : password
 
 # Description
 A web app that is for keeping track of lockers, which allows adding a new locker to database or editing an existing locker that is in database,
