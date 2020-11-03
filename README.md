@@ -2,8 +2,8 @@
 An app to keep track of lockers
 
 ## Live App
-https://locker-cms-demo.herokuapp.com
-username: guest@gmail.com
+https://locker-cms-demo.herokuapp.com  
+username: guest@gmail.com  
 password : password
 
 # Description
