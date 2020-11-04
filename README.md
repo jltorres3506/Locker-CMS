@@ -8,9 +8,9 @@ password : password
 passcode: 12345
 
 # Description
-A web app that is for keeping track of lockers, which allows adding a new locker to database or editing an existing locker that is in database,
+A web app that is for keeping track of lockers, which allows adding a new locker to database or editing an existing locker that is in the database,
 it has easy navigation for adding or clearing a locker when an employee is no longer with the company, has built in user account management, to restrict app use 
-or changes to user accounts
+or changes to user accounts.
 
 # Reason for app
 A company where I was employed was having a very hard time keeping track of their 200+ employee lockers. The way it was being tracked was via excel spreadsheets, which different people had different copies of this excel spreadsheet, for keeping track of empty lockers, along with what locker belongs to which employee and when it was assigned and the combinations for those lockers. At the end it was a very tedious task because different versions of the excel spreadsheet existed. With this app, any supervisor could login and make the needed changes and those changes would be current for the next supervisor to see. The best part about it is that they could access it via mobile devices and not need to worry about an excel spreadsheet, with this app in place there is more reliable data and accountability then before. 
